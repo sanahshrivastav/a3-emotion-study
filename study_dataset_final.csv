@@ -1,0 +1,301 @@
+trial_id,text,label,ground_truth,ai_prediction,ai_confidence,correct
+T001,im feeling doubtful about all of the patterns and colors working together but we cant be sure until everything comes together,4,fear,fear,0.9972072,True
+T002,i feel a strange gratitude for the hated israeli occupation of sinai that lasted from to for actually recognizing the importance of sinais history,5,surprise,fear,0.63466495,False
+T003,i wish i could bottle her squeals of delight and take them out whenever im feeling grumpy,3,anger,anger,0.9984623,True
+T004,i am sitting on the couch and im feeling rather ashamed so to get in the act of things i slap myself,0,sadness,sadness,0.998868,True
+T005,ive got to learn to be mindful of how i feel all the time not just if im suspicious of a feeling,4,fear,fear,0.99686384,True
+T006,i feel like a wimpy canoe floating towards a rising tsunami,4,fear,fear,0.9968426,True
+T007,i feel cranky tonight so im not really updating properly,3,anger,anger,0.9984163,True
+T008,i am working right now guys and feel horny and so much passion,2,love,love,0.9944344,True
+T009,i also feel lethargic and again,0,sadness,sadness,0.99903274,True
+T010,ive struggled mightily through today and even though i feel cranky and tired and unmotivated still i really am not going to be going to sleep before eleven thirty,3,anger,anger,0.9984669,True
+T011,i have a lot going on in my life and feel overwhelmed,4,fear,fear,0.7884032,True
+T012,im feeling energetic,1,joy,joy,0.99918264,True
+T013,i mentioned in my last blog that i have started to get the feeling that i have been pressured into studying things i do not like which has also made me into a person i might not fully be,4,fear,fear,0.9972262,True
+T014,i can send my children to a private school and i don t have to apologize explain or feel embarrassed about this choice,0,sadness,sadness,0.9989562,True
+T015,i feel appalled that i took advantage of my old friend s kindness,3,anger,anger,0.99629647,True
+T016,im not feeling anything suspicious really,4,fear,fear,0.9947168,True
+T017,i received the blanket i was absolutely amazed on how fluffy it is and extremely soft i really didnt think it was going to feel that amazing,5,surprise,surprise,0.7352526,True
+T018,i feel uncomfortable here,4,fear,fear,0.99627423,True
+T019,i set aside that feeling and happily helped them now that every thing was been normalized and the students had liked me they change my schedule and i am just forgotten to oblivion,2,love,love,0.9869327,True
+T020,i started to feel like i was going mad as i was sure i could see stars floating in the water but whenever i went to grab one i came up with nothing,3,anger,anger,0.99804354,True
+T021,i can honestly say that after each sistahs chat i feel invigorated and blessed,1,joy,joy,0.99430686,True
+T022,i also know what it feels like to be in a relationship where you feel like a burden and too much and not worth loving or pursuing and its just,2,love,love,0.99530065,True
+T023,im feeling restless and frustrated right now in that way specific to people who are recovering from illness or injury,4,fear,fear,0.99723685,True
+T024,i feel like they bring the characters to life completely and i m always kind of surprised what the actors do do together,5,surprise,surprise,0.9907053,True
+T025,i cant write a review for a book i adore unless i am feeling in the adoring mood at that moment,2,love,love,0.9923725,True
+T026,i will remember to come to you when i feel beaten and depressed because in faith only can we truly be healed,0,sadness,sadness,0.9990853,True
+T027,i feel like i should not be surprised at this development,5,surprise,surprise,0.990934,True
+T028,i know it can take weeks for a book to go free on amazon and barnes amp noble and in this age where cents can buy a full length ebook i feel a little funny charging even cents for a work that is almost certain to be under pages possibly under,5,surprise,surprise,0.9864877,True
+T029,i kind of feel a little petty about this,3,anger,anger,0.99844724,True
+T030,i love to dance but often feel inhibited by my own body unsure what i am capable of hyper concerned about other people watching me and having opinions on my style or just feeling awkward as if i have no idea what i am supposed to do here,4,fear,sadness,0.9636095,False
+T031,i feel so dirty but after spending a day at the mk show me and a buddy decided we would get the two player starter between us luckily for us both i liked the everblight and he liked the circle maybe a tad to much so it all worked out well,0,sadness,sadness,0.9986694,True
+T032,i just say the things that i want without even thinking what the person would feel its rude right,3,anger,anger,0.99843746,True
+T033,i regularly feel embarrassed about,0,sadness,sadness,0.99891436,True
+T034,i feel stupid whenever this happens,0,sadness,sadness,0.99892443,True
+T035,i can feel the pressure falling more so on my shoulders and im feeling slightly doubtful of myself which leads to unhappy thoughts not usually like my optimistic self i must say,4,fear,fear,0.9968749,True
+T036,i feel fond of him though because he feels like an amalgamation of many people i already know,2,love,love,0.9950537,True
+T037,i feels so lame,0,sadness,sadness,0.99897504,True
+T038,i also got some very nice condiment type pressies whilst at our local garden centre today so i am feeling that i have achieved something towards the festive season,1,joy,joy,0.99925727,True
+T039,i feel like my only role now would be to tear your sails with my pessimism and discontent,0,sadness,sadness,0.98851144,True
+T040,i feel i am appreciative i take care of the baby i try to keep the apt clean as much as possible and i try not to call him a million times to find out when hell be home it varies from day to day as he is sort of self employed so its hard to plan things around his schedule,1,joy,joy,0.9992035,True
+T041,i am back to feeling determined,1,joy,joy,0.998855,True
+T042,i take a walk in the park feeling joyful,1,joy,joy,0.9993242,True
+T043,i stay the more distanced from others i feel it is strange because i sometimes feel like a new friendship is growing or forming,5,surprise,fear,0.6534505,False
+T044,i feel divine in more ways than one,1,joy,joy,0.99887604,True
+T045,i feel it is worthwhile to give you all a more in depth city sized if you will look at one of our cycle days,1,joy,joy,0.9992576,True
+T046,i thought i didnt feel anything anymore it was over it was ok well today a different story i feel him i want him my heart hurts thinking he wont be around i still want him around i guess its still valid,1,joy,joy,0.9983734,True
+T047,i feel strange talking about less serious things right now like cooking,4,fear,fear,0.71545017,True
+T048,i feel about as helpless and superfluous as i did when jenn had elaine naturally,4,fear,sadness,0.7133985,False
+T049,i been that i feel like i can traipse in and out of all your lives tromping on your heel loving hearts with my stilettos,2,love,love,0.99489623,True
+T050,i feel that i am afraid of whatever ad anything that will happen and idc is it good or bad i am just afraid and i hope god you will help me in whatever i do,4,fear,fear,0.9976566,True
+T051,i feel more violent than ever right now,3,anger,anger,0.99783474,True
+T052,i feel more gentle that way wth,2,love,love,0.994311,True
+T053,i am balancing on my hands with my feet hanging over and it feels like pretty far and im terrified to let them drop but im totally calm at the same time hanging here,4,fear,fear,0.99775654,True
+T054,i have this grave feeling it will not be back until tomorrow and strangely enough i have accepted it,1,joy,love,0.76000655,False
+T055,i wanted to skate fast wanted to try everything just to see the difference in feel which was amazing,5,surprise,surprise,0.50115764,True
+T056,i think or feel but like this person i am still amazed by them,5,surprise,surprise,0.99063945,True
+T057,i feel very saddened that the king whom i once quite respected as far as monarchs go was ineffectual at best,1,joy,joy,0.98529786,True
+T058,i don t think we re to that point yet and i foresee a lot of traffic between my bed and the crib until he is old enough to no longer feel that i am the only acceptable answer in the dark,1,joy,joy,0.99879825,True
+T059,i was quite surprised with the weather these past few days but im so thankful for that since i still can wear my shorts out without feeling that cold yes no kidding,3,anger,anger,0.9979226,True
+T060,i made that make me feel dumb and dumber,0,sadness,sadness,0.9990006,True
+T061,i remember feeling nervous,4,fear,fear,0.9977975,True
+T062,i dont want flowers or candy but the kind of guy that knows i like thinly sliced limes in my mineral water because it makes me feel glamorous and is humored by how pretentious that is,1,joy,joy,0.99918586,True
+T063,i feel dirty watching this series and you can tell how the series is trying to induce false emotions in the viewer,0,sadness,sadness,0.9977443,True
+T064,i decent article which i knew likely had good information because my initial response was to feel offended and want to argue despite the fact that it was talking about not doing exactly that,3,anger,anger,0.99827266,True
+T065,i was feeling whether it be mad sad disappointed or peaceful,3,anger,anger,0.9982742,True
+T066,i never feel depressed because my cancer and i have learnt to live and sleep with each other,0,sadness,sadness,0.9989901,True
+T067,i never make her separate from me because i don t ever want her to feel like i m ashamed with her,0,sadness,sadness,0.99897385,True
+T068,i found myself feeling a bit overwhelmed,5,surprise,fear,0.59191126,False
+T069,i grew up around this feeling living only minutes away from the gorgeous atlantic ocean in brazil so its probably no surprise i grew fond of the ocean,1,joy,joy,0.66926557,True
+T070,i feel like being all stubborn and stingy,3,anger,anger,0.9981584,True
+T071,i just feel tender,2,love,love,0.99455136,True
+T072,i feel a pain in my own heart as every priestess in the temple drops as every single ven who is devoted to talia loses their devotions and takes a rank of injury equal to their devotion,2,love,love,0.98235047,True
+T073,i feel unprotected even while travelling alone,4,fear,fear,0.9851109,True
+T074,i am feeling rather heartless because i recently heard the words unconditional love and could not find it in myself,3,anger,anger,0.99638027,True
+T075,i guess as long as the table in the above is policy discussions and not working and fighting for change within the american theater which i feel im very devoted to i can get behind it though it seems slanted,2,love,love,0.9927866,True
+T076,i am still feeling a tad strange in those pearly whites,5,surprise,fear,0.6653564,False
+T077,i bought this doraemon backpack from a charity store i had every intention of putting it in my etsy store but i feel like its too cute to sell,1,joy,joy,0.9988726,True
+T078,i feel so very keen to leave the country atm,1,joy,joy,0.99901724,True
+T079,i explain why i clung to a relationship with a boy who was in many ways immature and uncommitted despite the excitement i should have been feeling for getting accepted into the masters program at the university of virginia,1,joy,joy,0.9874046,True
+T080,i feel all funny sometimes,5,surprise,surprise,0.98987657,True
+T081,i feel kinda bitchy and cranky i need to try and take a nap,3,anger,anger,0.99841356,True
+T082,i feel if i completely hated things i d exercise my democratic right speak my mind in what ever ways possible and try to enact a change,3,anger,anger,0.63613427,True
+T083,i told him that i was willing to do whatever it took for me to not have to feel this horrible every day,0,sadness,sadness,0.9989654,True
+T084,i lost a few people which i hate because i have a really hard time letting go of people to whom i feel loyal,2,love,love,0.9940256,True
+T085,i feel for all of you who have been supporting me is so extreme there would be no way to put a number value on it,1,joy,love,0.6349241,False
+T086,i feel that he is gazing me and giving a naughty smile encouraging me to study more,2,love,love,0.99347657,True
+T087,i feel affectionate toward him,2,love,love,0.99534386,True
+T088,i am feeling profoundly peaceful,1,joy,joy,0.9992071,True
+T089,im feeling a lot less ugly duckling and a lot more a href http,0,sadness,sadness,0.99900013,True
+T090,i feel ashamed and so i tried my very best to help them,0,sadness,sadness,0.99897385,True
+T091,i felt anger when at the end of a telephone call,3,anger,anger,0.9978783,True
+T092,im polyamorous something im starting to feel truly accepted for being,2,love,joy,0.6503698,False
+T093,getting sent on a company expense trip to another state to work for a week at that plan,1,joy,anger,0.7981036,False
+T094,i am feeling pressured to blog the bad,4,fear,fear,0.9976761,True
+T095,i would call success and i was feeling pretty depressed about the state of clothes,0,sadness,sadness,0.9990214,True
+T096,i hate these feelings in my heart i hate that work stressed me out i hate that cornelius wont let me get my way im frustrated lord,0,sadness,anger,0.5848641,False
+T097,i am feeling bitchy this evening,3,anger,anger,0.9982522,True
+T098,i feel passionate about knitting and seeing really good films and the surprisingly awesome tv programs that are on now i cant believe i just wrote that,2,love,joy,0.72842205,False
+T099,i cannot even begin to express in words the depth of sorrow that i feel having not posted any of my ludicrous rants over the passed days,5,surprise,sadness,0.9987388,False
+T100,i feel she said quickly i am so glad,1,joy,joy,0.99912554,True
+T101,i feel myself falling into the pit of buying it from her i think he s for real i m just skeptical of the women,4,fear,fear,0.99694306,True
+T102,i feel very honoured to have been part of the bond family and very much hope i have a chance to work with them again sometime in the future,1,joy,joy,0.9991227,True
+T103,i spend a lot of time feeling disappointed with myself for not doing a better job at attaining my goals,0,sadness,sadness,0.9990163,True
+T104,i listen to it i feel all rebellious,3,anger,anger,0.99816567,True
+T105,i feel curious because i would like to explore what is at the top of the helterskelter like plant,5,surprise,surprise,0.9897333,True
+T106,i was however totally petrified of feeling it scared to death of giving in and releasing it and afraid i wouldnt be able to cap it again,4,fear,fear,0.99784935,True
+T107,i feel like i wouldnt have a longing if only we could have a baby and have that new experience together,2,love,love,0.99453026,True
+T108,i am not surprised cause its like ok when you feel crappy and it just continues for like days or so you really try to avoid getting that sickness again,0,sadness,sadness,0.9988274,True
+T109,im always feeling so agitated overly excited and impatient to those who are close to me,3,anger,fear,0.75779235,False
+T110,i feel these days living in fears just another way of dying before your time so today i am declaring myself fearless,1,joy,joy,0.9985038,True
+T111,i was like should i feel sweet or feel offended,2,love,love,0.9569591,True
+T112,i feel overwhelmed how about you,5,surprise,fear,0.66600037,False
+T113,i feel like the crows and roosters will be teamed up with the horses and go against the bulls sharks and other monsters that are trying to take over of cool ranch,1,joy,joy,0.9991334,True
+T114,i feel uncomfortable since i have a smaller rib cage and a bigger chest either i am spilling over the top of the tank or the elastic band support is too tight or too loose,4,fear,fear,0.9969812,True
+T115,i have moments where i just feel so overwhelmed that my eyes well up with tears,4,fear,fear,0.7470458,True
+T116,ive learned that there are angels on earth who feel me as i feel them who stand by with a loving thought a healing heart or a steady hand just as i would also offer without a moments hesitation in return always,2,love,love,0.9946944,True
+T117,i ever recognized what it was to feel passionate about something was with music,2,love,joy,0.51270336,False
+T118,i got home and told peter how i was feeling he wasnt shocked at all by what i was telling him,5,surprise,surprise,0.9901035,True
+T119,i feel so disgusted when i see blood and feel like faiting and also when people eat raw meat in front of me,3,anger,anger,0.99836785,True
+T120,i just went about my script of would you like mustard or sauce with that and started to feel really startled,4,fear,fear,0.97893447,True
+T121,i continue to feel so content about our decision to move here,1,joy,joy,0.9991179,True
+T122,i am feeling very petty right now,3,anger,anger,0.9983291,True
+T123,i help my daughter when she is feeling angry,3,anger,anger,0.99814844,True
+T124,i feel it is very rude and ingorant,3,anger,anger,0.9984428,True
+T125,i just feel its one of those things you dont talk about too much because then too many people come to know and then the plan doesnt taste as sweet nor does it feel like a plan,2,love,love,0.9759376,True
+T126,i just feel are ludicrous and wasting space or so trite they should have looked at the book first and come up with something a little more original,5,surprise,sadness,0.99403715,False
+T127,i feel fucking woeful looking at the other girls,0,sadness,sadness,0.99095166,True
+T128,i feel it so easily like that of a gentle rain that warms the earth and brings laughter and delight from all those that pause to take notice of such a blessing,2,love,love,0.99499655,True
+T129,i feel lashes out at me and is rude,3,anger,anger,0.9984913,True
+T130,i start to feel a little overwhelmed knowing i have to make still,5,surprise,surprise,0.5190929,True
+T131,i figured my parents wont make me feel accepted so i stopped trying i turned to romantic relationships with men,2,love,joy,0.51499647,False
+T132,i feel like if people accepted that wed get along a lot better,2,love,joy,0.7869465,False
+T133,i needed some space i needed to grow i was in the midst of some serious change and ok yes they had also hurt my feelings pretty badly and i was a bit spiteful,3,anger,anger,0.9874956,True
+T134,i must add the crowd was similar to last night except it had a much more laid back stoner feel with supporting cast of parents escaped from their kids,2,love,love,0.9666467,True
+T135,i feel more amazed and more thankful for having e in our lives,5,surprise,surprise,0.99085265,True
+T136,i just feel like im going no where and that the period of time where i was so very much enthralled with life and the options it proposed is now over,5,surprise,surprise,0.9797028,True
+T137,i can cycle further than ever before and the feeling of finishing the manchester to blackpool miles then not being at all bothered at having to ride an extra mile to put,3,anger,anger,0.99848276,True
+T138,i feel insulted by how those heroes of cosplay goons said they don t care if you re if,3,anger,anger,0.9983076,True
+T139,i look at their situation and feel so so jealous that i almost cant bear it,3,anger,anger,0.9980775,True
+T140,ive feeling a little blank and could think of nothing to write about which might be interesting to explore or had my mind captivated,0,sadness,sadness,0.99892527,True
+T141,i love neglecting this blog but sometimes i feel for my faithful readers,2,love,love,0.7444415,True
+T142,im feeling somewhat nostalgic about the game just from the fact that its star wars,2,love,love,0.99475807,True
+T143,i usually ignore page invites that are irrelevant to me or facebook game invites because its impersonal and it feels insincere,3,anger,anger,0.99490225,True
+T144,i feel very mislead by someone that i really really thought i knew and liked very much so,2,love,love,0.9898645,True
+T145,i already feel he is using us it feels weird because i havent even done anything there yet but i feel it coming like ministry coming at me,4,fear,surprise,0.5170879,False
+T146,i feel thats just strange on wotcs behalf,5,surprise,fear,0.68750364,False
+T147,i managed however to relax and enjoy the scenery feeling romantic and thoroughly enjoying our th anniversary cruise,2,love,love,0.9933708,True
+T148,i feel extremely privileged to live in a country where a vote is legitimate and matters,1,joy,joy,0.99893826,True
+T149,i feel so disappointed when my ex girlfriend doesn t call me back,0,sadness,sadness,0.9990687,True
+T150,i feel like alcoholism is something that is widely accepted as the norm in gay culture,1,joy,joy,0.98138165,True
+T151,im ok with that it feels a little weird,5,surprise,fear,0.68971646,False
+T152,i do feel terribly remourseful that i didnt stay faithful to my plans and get him sooner,2,love,joy,0.5414314,False
+T153,i will try and stay focused in order to avoid that feeling of a reluctant finish,4,fear,fear,0.9970573,True
+T154,i feel tortured delilahlwl am considering i had one the other day about one of my closest friends raping and killing chicks,3,anger,fear,0.6158825,False
+T155,i both feel impatience at the rate of loss and impressed at the same time,5,surprise,surprise,0.9896548,True
+T156,i encourage you next time youre feeling a little uncomfortable do your best to embrace it,4,fear,fear,0.9963742,True
+T157,i didn t feel intimidated or overwhelmed with information though,4,fear,fear,0.9968663,True
+T158,i have not only not lost any yarn overs but am now done with my first lace project and feeling pretty pleased,1,joy,joy,0.9992416,True
+T159,i feel that sometimes i ve been distracted and neglectful i am thankful that this is not about adding another box to check in my otherwise busy days,3,anger,anger,0.99826366,True
+T160,i feel respected and secure where i can journey toward loving and be loved in return,1,joy,joy,0.99484164,True
+T161,i never feel shy to call or send a billion text messages to and i wont be bugging her,4,fear,fear,0.9973062,True
+T162,i didnt feel i rushed things dhawan tweet script type text javascript src http platform,3,anger,anger,0.99737966,True
+T163,i did not know this i could not look out upon the sea and sky without feeling mildly discontent,0,sadness,sadness,0.9985702,True
+T164,im also still feeling whiney as hell so its possible i could rant a bit today,0,sadness,sadness,0.9981906,True
+T165,i feel drained and i am physically sore from the work i did,0,sadness,sadness,0.9990471,True
+T166,i feel cared for and accepted,2,love,love,0.80096114,True
+T167,i am feeling amazing and seeing the difference,5,surprise,joy,0.5423517,False
+T168,i feel as though i am on another adventure and i am more curious about it than anything else,5,surprise,surprise,0.9903994,True
+T169,im feeling cooped up and impatient and annoyingly bored,3,anger,anger,0.99697,True
+T170,i feel terrific in every one of them,1,joy,joy,0.99881893,True
+T171,i feel his gracious presence even now,1,joy,joy,0.9281252,True
+T172,i am just feeling as indecisive as ever i suppose,4,fear,fear,0.99580425,True
+T173,i described how i was feeling the feeling of being out of control and completely restless the fear of what could still happen my obsession with trying to do it all and the fact that it was just not working,4,fear,fear,0.9970108,True
+T174,i was feeling really troubled and down over what my dad said,0,sadness,sadness,0.9988476,True
+T175,i feel reassured that the county government in my county takes the murder of an illegal immigrant in a back alley seriously enough to prosecute someone years later,1,joy,joy,0.9990426,True
+T176,i feel last time ure the one that feel paranoid,4,fear,fear,0.9976712,True
+T177,i feel very naughty to step outside my species but you are compellingly different,2,love,love,0.9927746,True
+T178,i feel defeated but others i feel refreshed,0,sadness,sadness,0.99894387,True
+T179,i replied feeling strange at giving the orders,5,surprise,fear,0.7761226,False
+T180,im feeling generous today heres one more you may have already seen but is good for a chuckle,2,love,joy,0.9016369,False
+T181,i was gifted one of the books but am feeling a bit intimidated to take on the intricate work,4,fear,fear,0.99612033,True
+T182,im thinking well i could be a bit smaller but for health reasons and i should see a doctor more regularly because im feeling crappy,0,sadness,sadness,0.99886715,True
+T183,i didn t think it was possible to make a cover that expressed the personality of the novel since it s a strange cross genre story but the photo that was found nails the heart of the book so closely that i feel a bit stunned,5,surprise,surprise,0.98882604,True
+T184,i love and captured an atmospheric feeling in their landscapes that really impressed me,5,surprise,surprise,0.98941797,True
+T185,i was bonded to that point in time and still feel fond of this memory,2,love,love,0.9952135,True
+T186,i feel so weird and scattered with all wonders about a million different things,5,surprise,fear,0.59454054,False
+T187,i feel shocked that you d stoup to destinys child b,5,surprise,surprise,0.9910727,True
+T188,i feel petty all of a sudden,3,anger,anger,0.9983576,True
+T189,i also feel it helped the newbie bloggers connect and feel welcomed immediately,1,joy,joy,0.999281,True
+T190,i feel so discontent so guilty so pathetic so lonley and i hate myself for it,0,sadness,sadness,0.99901557,True
+T191,im lucky enough in life to meet someone who makes me feel safe happy secure and loved i feel theres no reason to wait,1,joy,joy,0.99928504,True
+T192,whenever i put myself in others shoes and try to make the person happy,3,anger,joy,0.9989329,False
+T193,i don t have to go around questioning broads or feeling suspicious,4,fear,fear,0.99650735,True
+T194,i managed to re learn feeling insecure again,4,fear,fear,0.99783653,True
+T195,im sorry i feel so uncertain about it,4,fear,fear,0.9969637,True
+T196,i feel so drained at the end of a novel because i try my very hardest to get something from it that will change and impact my life,0,sadness,sadness,0.99906355,True
+T197,i have been feeling overwhelmed with it all and needing to take time out,5,surprise,surprise,0.8075567,True
+T198,i don t feel betrayed coz the backstabber had no grounds for their accusation but i m just amazed at some people s ability to do such things,5,surprise,sadness,0.99150616,False
+T199,i feel numb as i carry on and i wonder if i will get over it,0,sadness,sadness,0.9987777,True
+T200,i began to feel very strange,4,fear,fear,0.7833097,True
+T201,i feel like an ungrateful ass a href http thisisntcuteanymore,0,sadness,sadness,0.9990601,True
+T202,im even feeling liked by the girls who hate pretty much everyone,2,love,love,0.99211496,True
+T203,i feel more of numb now,0,sadness,sadness,0.9989945,True
+T204,i don t have a schedule or childhood friends and feel a little timid about just getting out there by myself,4,fear,fear,0.9976954,True
+T205,im not sure if im more at peace with our situation or if im just not feeling as bitter about it but in the past five months something has changed within me,3,anger,anger,0.9982876,True
+T206,i was feeling very unsure of myself and at near breaking point,4,fear,fear,0.9973928,True
+T207,i type these words i feel like i shouldn t be surprised,5,surprise,surprise,0.9904715,True
+T208,i bought the gb iphone i got a apple store credit i feel like they were sympathetic to early buyers and responded appropriately,2,love,love,0.994321,True
+T209,i have that feeling that spark and i am not sure where it is going or if it will ever turn into that flame,1,joy,joy,0.9659064,True
+T210,i considered jogging since it is not too cold today but decided against it as my right ankle is already feeling tender for some reason,2,love,love,0.99497885,True
+T211,i feel blessed to know this family,2,love,joy,0.5145436,False
+T212,i feel the pressure to be funny all the time,5,surprise,surprise,0.98850226,True
+T213,i am only providing the link as a courtesy to its author but it was all about stuff that was either before my time or i never experienced even if i lived when it was available so i couldn t feel emotional about any of it,0,sadness,sadness,0.99885154,True
+T214,i don t feel brave though,1,joy,joy,0.99926585,True
+T215,i never know how to talk to people after shows i always feel a bit dazed so i hope they didnt think i was rude,5,surprise,surprise,0.98800206,True
+T216,i would do almost anything to have that feeling back and those days back they were carefree and wonderful and now everything in my life is just so complicated,1,joy,joy,0.99923015,True
+T217,i would like to take the opportunity to describe one day this week when i was feeling particularly gloomy,0,sadness,sadness,0.9990038,True
+T218,i will practice meditation if i feel overwhelmed and hopefully become successful in peaceful practice,5,surprise,surprise,0.5633272,True
+T219,i came out of the airport that makes me feel irritable uncomfortable and even sadder,3,anger,anger,0.9983754,True
+T220,i did about nothing today and feel a little regretful,0,sadness,sadness,0.9988336,True
+T221,i feel like that because for the most part i have accepted that this is a part of my life and that people will never changed,2,love,love,0.78681445,True
+T222,i am feeling overwhelmed by trying to do it all that i think on the women before me,5,surprise,surprise,0.49894875,True
+T223,i feel afraid agn lol whats new,4,fear,fear,0.99777466,True
+T224,i feel immensely distracted by the barrage of media i receive solicit,3,anger,anger,0.99782014,True
+T225,i always feel stupid afterwards,0,sadness,sadness,0.9989219,True
+T226,i feel like i would order carryout from if i lived in the area i am still curious to try some of their other tacos,5,surprise,surprise,0.9900669,True
+T227,i feel affirmed gracious sensuous and will have less self doubt when a href http generations,2,love,joy,0.99078584,False
+T228,i feel so fearless in these post grieving days,1,joy,joy,0.9989478,True
+T229,i feel doubtful in my abilities,4,fear,fear,0.99719405,True
+T230,im not feeling pressured to perform athletic moves in order to stay on the field,4,fear,fear,0.9976646,True
+T231,i remember that i moved them but i cant remember where and i feel so foolish,0,sadness,sadness,0.998874,True
+T232,i was feeling frantic,4,fear,fear,0.9972289,True
+T233,i did a body scan and realized that everything was feeling amazing,5,surprise,joy,0.6892949,False
+T234,i was so uncomfortable and feeling weird feelings but wasn t sure if they were contractions since i never really felt contractions with jared until they jacked me up with pitocin,5,surprise,surprise,0.52576303,True
+T235,i am feeling a bit offended,3,anger,anger,0.998185,True
+T236,i feel anger i feel sad i feel joy and i feel other emotions too but will stick to a few,0,sadness,sadness,0.99911076,True
+T237,i feel groggy and out of sorts from my episode not counting the fact that i got scared last night,0,sadness,sadness,0.99888855,True
+T238,i feel that bassanio is sincere about wooing portia,1,joy,joy,0.9990345,True
+T239,ive blogged and i feel strange about it,5,surprise,fear,0.85388273,False
+T240,ive been feeling afraid a lot lately,4,fear,fear,0.9976082,True
+T241,i feel shocked and sad at the fact that there are so many sick people,5,surprise,surprise,0.9905239,True
+T242,i am in the need of some extra guidance and i am feeling doubtful god seems to put the right message in my ear that i need at just the right time,4,fear,fear,0.99725443,True
+T243,i took for granted a few weeks ago is really weird and makes me feel really agitated and frustrated,3,anger,anger,0.6845013,True
+T244,i stole a book from one of my all time favorite authors and now i feel like a rotten person,0,sadness,sadness,0.998809,True
+T245,i had just hiked up and down a long steep hillside loaded with grass and bushes so i was feeling pretty doubtful id be able to find it,4,fear,fear,0.9973802,True
+T246,i feel inside coz i m so fucking horny,2,love,love,0.9939505,True
+T247,i just keep feeling like someone is being unkind to me and doing me wrong and then all i can think of doing is to get back at them and the people they are close to,3,anger,anger,0.989253,True
+T248,im feeling very doubtful about the necessity of that big coat,4,fear,fear,0.99722004,True
+T249,i feel so damn curious with what this blond doctor plan to do this night,5,surprise,surprise,0.9905336,True
+T250,i will admit with the joy of cooking there are also times where you feel defeated,0,sadness,sadness,0.9990773,True
+T251,i feel more loyal to micah,2,love,love,0.9931733,True
+T252,i feel like an idiot for trusting you though,1,joy,joy,0.99878365,True
+T253,i feel your prescence a gentle touch,2,love,love,0.9948201,True
+T254,i was feeling emotional crying for no apparent reason but at the time it feels like the world is ending,0,sadness,sadness,0.99889946,True
+T255,i wish to know whether i should feel sympathetic towards the airline american if say their plane is on fire or their pilot has exploded or whether i should want to set them on fire if say they just decided to walk on their obligations to save money,2,love,love,0.99506664,True
+T256,ive been feeling from my adoring fans that would be teh whole like of you who are my friends here i felt brave and excited and ventrured forth with guitar in hand to a local open mic night,2,love,love,0.9846843,True
+T257,i feel quite worthless but i hear that that is pretty normal for north americans at this point,0,sadness,sadness,0.9989773,True
+T258,im feeling quite positive in what i want to achieve,1,joy,joy,0.9991868,True
+T259,i cant do a simple math question and guess what i broke down in front of my tuition teacher whom i have known for almost years now feeling pressured and i feel so bad bout myself,4,fear,fear,0.99677867,True
+T260,i feel crappy i eat crappy,0,sadness,sadness,0.9987571,True
+T261,i got up saturday morning feeling like crud but determined not to let it get the best of me,1,joy,joy,0.9989422,True
+T262,i am feeling joyful every part of me feels happy and light and whimsical,1,joy,joy,0.9992805,True
+T263,i find myself feeling anxious and unsure,4,fear,fear,0.99769294,True
+T264,i feel so much boring with my straight hair for all over years haha,0,sadness,sadness,0.9988838,True
+T265,i didnt get to prank anyone throughout the whole day cos i was either too busy or not feeling creative,1,joy,joy,0.9990693,True
+T266,i always feel a little jealous of my son because when i joined the church i went almost directly into young women so i didnt learn the primary songs,3,anger,anger,0.9981552,True
+T267,i suggest you take a look at them when you feel curious enough to know more things about specific english words related to familiar diseases,5,surprise,surprise,0.99042237,True
+T268,i just want that feeling of not caring about unnecessary stuff like i felt before,2,love,love,0.9942514,True
+T269,i just got back from another miler faster than yesterday and im feeling amazing,5,surprise,joy,0.80742437,False
+T270,i am and i am looking for some vest tops i have some shorts but long ones due to feel paranoid that i have cellulite everywhere,4,fear,fear,0.9974661,True
+T271,i honestly thought impossible at this point i feel pretty,1,joy,joy,0.9989796,True
+T272,i don t know what to feel as in i am not sure should i feel sad cause it is ending or should i feel glad that it is over and i can move on,1,joy,joy,0.9388416,True
+T273,i have power feeling to justify their laziness and being bitchy against skinny girls,3,anger,anger,0.998175,True
+T274,i find it helps to let go of self will by saying let your will be done not mine or when i m feeling particularly impatient in god s time not my time,3,anger,anger,0.99739575,True
+T275,i go through my day feeling your movements and am amazed that something so miraculous is happening in my body its like a special secret only you and i have,5,surprise,surprise,0.9910987,True
+T276,i reckon you need to stop feeling bitter and be realistic,3,anger,anger,0.9981981,True
+T277,i feel so greedy so needy so helpless,3,anger,anger,0.99676514,True
+T278,i was feeling pretty relaxed by the time i boarded the very new looking airbus and headed into the hazy sky en route to honolulu,1,joy,joy,0.99908197,True
+T279,i was feeling disheartened when going on dates because i didn t feel i was meeting anyone i clicked with or would consider a long term relationship with,0,sadness,sadness,0.998992,True
+T280,i feel intimidated by the tasks you feel overwhelmed by huge and complicated tasks,4,fear,fear,0.9965509,True
+T281,im feeling absolutely amazing,5,surprise,joy,0.586502,False
+T282,i feel so jaded and bored,0,sadness,sadness,0.9990144,True
+T283,i don t like the feeling i get when someone is even a little bit offended by some offhand remark i ve made,3,anger,anger,0.998073,True
+T284,i can t help feeling curious about it,5,surprise,surprise,0.9907142,True
+T285,i feel so frustrated because i had a long weekday and i dont really have plenty of rest and right now he keeps on coming in the room,3,anger,anger,0.9983606,True
+T286,i guess it doesn t help that i got sick on black friday and was forced against my will to maintain my promise to stay in but being back in the city feels amazing,5,surprise,surprise,0.7116072,True
+T287,i feel that working together and supporting each other as a whole i can represent a larger younger voice in politics what can i say to that,2,love,love,0.5891502,True
+T288,i wish i could do that chinese bite on my finger so you feel the pain miles away thing but upon some reflection perhaps that wouldnt be very considerate,2,love,love,0.8002051,True
+T289,i sometimes feel irritated at the thought of spending money on a few annuals to spruce up my doorstep,3,anger,anger,0.9984237,True
+T290,i was lucky enough to feel and squeeze myself to a win in another festive challenge which involved a box full of items that we had to identify by blindly fondling through a hole,1,joy,joy,0.994703,True
+T291,i feel like it might just be ok,1,joy,joy,0.9990901,True
+T292,i do feel insecure sometimes but who doesnt,4,fear,fear,0.9976987,True
+T293,i feel for folks with tender plantings that may have been set out too soon it might actually dip below freezing over the next few nights,2,love,love,0.99481994,True
+T294,i have spoken about before but the feeling is getting stronger and i am curious if others have similar thoughts,5,surprise,surprise,0.98956,True
+T295,i feel less stress about doing pretty much any unpleasant obligation in life because i know that i will allow myself to mix it with things i enjoy running baking climbing coffee with girlfriends cuddling with my dog reading a book,0,sadness,sadness,0.99899596,True
+T296,i actually was in a meeting last week where someone yelled at an older lady because her phone rang i felt terrible for her your boss treats you unfairly or in this case someone makes you feel you are not worth anything is only allowing those who offended to steal your joy,3,anger,sadness,0.9954195,False
+T297,i am feeling pretty fearless,1,joy,joy,0.9991567,True
+T298,i feel love se inscrie intr un rafinament lejer romantic si extrem de feminin,2,love,love,0.9944131,True
+T299,i ran errands to buy cora a few newborn sized sleepers i had not previously made any newborn sized babies and went out to lunch to celebrate how great i was feeling i feel amazing no pain no pain meds and moving around almost completely normally at days out,5,surprise,joy,0.73394823,False
+T300,i was feeling the need for some christmas crafting this week especially after seeing a couple of lovely quilty christmas projects at stitch group,2,love,love,0.99259627,True
