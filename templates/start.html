@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% block body %}
+<h1>{{ 'Emotion Study — With AI' if condition == 'ai' else 'Emotion Study — Without AI' }}</h1>
+<p>You'll read <strong>12 short messages</strong> and choose the emotion that fits each one best. The study takes about <strong>3–5 minutes</strong>.</p>
+<p>Choose from sadness, joy, love, anger, fear, and surprise. Some messages may express more than one emotion; choose the closest match.</p>
+{% if condition == 'ai' %}<p class="note"><strong>With AI:</strong> You'll see a model suggestion and confidence score. The model can be wrong; your answer is your own decision.</p>{% else %}<p class="note"><strong>Without AI:</strong> Make your choices independently. No model suggestion will be displayed.</p>{% endif %}
+<p>For this class study, we record your participant code, answers, response times, confidence and effort ratings, and optional feedback. Please do not enter your name, uniqname, email, or password. You can stop at any time by closing the page.</p>
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+<form method="post">
+<label>Participant code <small>(use the same code in both conditions)</small><input type="text" name="participant_code" required maxlength="60" placeholder="e.g. bluefox27" autocomplete="off"></label>
+<label>Quick instruction check: How many emotion labels can you choose from?<select name="attention" required><option value="">Select an answer</option><option value="four">Four</option><option value="six">Six</option><option value="eight">Eight</option></select></label>
+<p><small>By continuing, you confirm you understand what is recorded and agree to participate in this class activity.</small></p>
+<button type="submit">Start study</button></form>
+{% endblock %}

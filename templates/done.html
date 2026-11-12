@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block body %}<h1>{{ 'Thank you!' if completed else 'Almost there' }}</h1><p>{{ 'Your study responses have been recorded.' if completed else 'Please complete the short final questionnaire.' }}</p>{% if not completed %}<a class="btn" href="{{ url_for('survey') }}">Go to questionnaire</a>{% endif %}{% endblock %}
