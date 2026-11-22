@@ -2,46 +2,73 @@ import csv, io, os, random, secrets, sqlite3, time
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
-from flask import Flask, request, session, redirect, url_for, render_template, abort, Response
+from flask import Flask, g, request, session, redirect, url_for, render_template, abort, Response
 
 BASE = Path(__file__).parent
 app = Flask(__name__)
+app.logger.setLevel('INFO')
 app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 DB = os.environ.get('DATABASE_PATH', str(BASE / 'study.sqlite3'))
 TURSO_DATABASE_URL = os.environ.get('TURSO_DATABASE_URL')
 TURSO_AUTH_TOKEN = os.environ.get('TURSO_AUTH_TOKEN')
+app.logger.info(
+    'Startup environment: SECRET_KEY=%s TURSO_DATABASE_URL=%s TURSO_AUTH_TOKEN=%s '
+    'DATABASE_PATH=%s ADMIN_TOKEN=%s EXPORT_TOKEN=%s',
+    'set' if os.environ.get('SECRET_KEY') else 'missing',
+    'set' if TURSO_DATABASE_URL else 'missing',
+    'set' if TURSO_AUTH_TOKEN else 'missing',
+    'set' if os.environ.get('DATABASE_PATH') else 'missing',
+    'set' if os.environ.get('ADMIN_TOKEN') else 'missing',
+    'set' if os.environ.get('EXPORT_TOKEN') else 'missing',
+)
 if bool(TURSO_DATABASE_URL) != bool(TURSO_AUTH_TOKEN):
+    app.logger.error('Startup failed: set both TURSO_DATABASE_URL and TURSO_AUTH_TOKEN, or neither')
     raise RuntimeError('Set both TURSO_DATABASE_URL and TURSO_AUTH_TOKEN to use Turso.')
 if TURSO_DATABASE_URL:
     import libsql
 
+DATABASE_BACKEND = 'Turso' if TURSO_DATABASE_URL else 'SQLite'
+app.logger.info('Startup database backend: %s', DATABASE_BACKEND)
 LABELS = ['sadness', 'joy', 'love', 'anger', 'fear', 'surprise']
 with open(BASE / 'study_dataset_curated.csv', newline='', encoding='utf-8') as f:
     TRIALS = list(csv.DictReader(f))
 TRIAL_BY_ID = {t['trial_id']: t for t in TRIALS}
+app.logger.info('Startup dataset loaded: trials=%d', len(TRIALS))
 
 def connect():
     if TURSO_DATABASE_URL:
-        return libsql.connect(database=TURSO_DATABASE_URL, auth_token=TURSO_AUTH_TOKEN)
+        app.logger.info('Database connect starting: backend=Turso')
+        c = libsql.connect(database=TURSO_DATABASE_URL, auth_token=TURSO_AUTH_TOKEN)
+        app.logger.info('Database connect complete: backend=Turso')
+        return c
+    app.logger.info('Database connect starting: backend=SQLite')
     Path(DB).parent.mkdir(parents=True, exist_ok=True)
     c = sqlite3.connect(DB, timeout=30)
+    app.logger.info('Database connection opened: backend=SQLite; configuring pragmas')
     c.execute('PRAGMA journal_mode=WAL')
     c.execute('PRAGMA busy_timeout=30000')
+    app.logger.info('Database connect complete: backend=SQLite')
     return c
 
 @contextmanager
 def db_connection():
     c = connect()
     try:
+        app.logger.info('Database transaction started: backend=%s', DATABASE_BACKEND)
         yield c
+        app.logger.info('Database commit starting: backend=%s', DATABASE_BACKEND)
         c.commit()
+        app.logger.info('Database commit complete: backend=%s', DATABASE_BACKEND)
     except Exception:
+        app.logger.exception('Database transaction failed: backend=%s', DATABASE_BACKEND)
         c.rollback()
         raise
     finally:
+        app.logger.info('Database connection closing: backend=%s', DATABASE_BACKEND)
         c.close()
 
 def init_db():
+    app.logger.info('Startup schema initialization starting: backend=%s', DATABASE_BACKEND)
     with db_connection() as c:
         c.execute('''
         CREATE TABLE IF NOT EXISTS participants (
@@ -58,9 +85,25 @@ def init_db():
             submitted_at TEXT NOT NULL,
             PRIMARY KEY (participant_id, trial_index));
         ''')
+    app.logger.info('Startup schema initialization complete: backend=%s', DATABASE_BACKEND)
 init_db()
 
 def now(): return datetime.now(timezone.utc).isoformat()
+
+@app.before_request
+def log_request_start():
+    g.request_started_at = time.monotonic()
+    app.logger.info('HTTP request started: method=%s path=%s', request.method, request.path)
+
+@app.after_request
+def log_request_complete(response):
+    started_at = getattr(g, 'request_started_at', None)
+    duration_ms = int((time.monotonic() - started_at) * 1000) if started_at is not None else -1
+    app.logger.info(
+        'HTTP request completed: method=%s path=%s status=%d duration_ms=%d',
+        request.method, request.path, response.status_code, duration_ms,
+    )
+    return response
 
 def current():
     pid = session.get('pid')
@@ -78,7 +121,6 @@ def home():
 @app.route('/start/<condition>', methods=['GET', 'POST'])
 def start(condition):
     if condition not in ('baseline', 'ai'): abort(404)
-    app.logger.info('Start route request: method=%s condition=%s', request.method, condition)
     if request.method == 'GET': return render_template('start.html', condition=condition)
     code = request.form.get('participant_code', '').strip()[:60]
     if not code: return render_template('start.html', condition=condition, error='Please enter a participant code.'), 400
@@ -91,6 +133,7 @@ def start(condition):
     random.shuffle(ids)
     session.clear()
     session.update(pid=pid, ids=ids, index=0, shown_at=time.time())
+    app.logger.info('Participant insert starting: condition=%s', condition)
     app.logger.info('Participant insert: opening database connection')
     with db_connection() as c:
         app.logger.info('Participant insert: connection established; executing insert')
