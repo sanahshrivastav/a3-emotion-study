@@ -124,6 +124,10 @@ def current():
 def home():
     return render_template('home.html')
 
+@app.route('/healthz')
+def healthz():
+    return {'status': 'ok'}, 200
+
 @app.route('/start/<condition>', methods=['GET', 'POST'])
 def start(condition):
     if condition not in ('baseline', 'ai'): abort(404)
