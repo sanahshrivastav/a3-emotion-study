@@ -1,4 +1,5 @@
 import csv, io, os, random, secrets, sqlite3, time
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, session, redirect, url_for, render_template, abort, Response
@@ -7,26 +8,48 @@ BASE = Path(__file__).parent
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 DB = os.environ.get('DATABASE_PATH', str(BASE / 'study.sqlite3'))
+TURSO_DATABASE_URL = os.environ.get('TURSO_DATABASE_URL')
+TURSO_AUTH_TOKEN = os.environ.get('TURSO_AUTH_TOKEN')
+if bool(TURSO_DATABASE_URL) != bool(TURSO_AUTH_TOKEN):
+    raise RuntimeError('Set both TURSO_DATABASE_URL and TURSO_AUTH_TOKEN to use Turso.')
+if TURSO_DATABASE_URL:
+    import libsql
+
 LABELS = ['sadness', 'joy', 'love', 'anger', 'fear', 'surprise']
 with open(BASE / 'study_dataset_curated.csv', newline='', encoding='utf-8') as f:
     TRIALS = list(csv.DictReader(f))
 TRIAL_BY_ID = {t['trial_id']: t for t in TRIALS}
 
 def connect():
+    if TURSO_DATABASE_URL:
+        return libsql.connect(database=TURSO_DATABASE_URL, auth_token=TURSO_AUTH_TOKEN)
+    Path(DB).parent.mkdir(parents=True, exist_ok=True)
     c = sqlite3.connect(DB, timeout=30)
-    c.row_factory = sqlite3.Row
     c.execute('PRAGMA journal_mode=WAL')
     c.execute('PRAGMA busy_timeout=30000')
     return c
 
+@contextmanager
+def db_connection():
+    c = connect()
+    try:
+        yield c
+        c.commit()
+    except Exception:
+        c.rollback()
+        raise
+    finally:
+        c.close()
+
 def init_db():
-    Path(DB).parent.mkdir(parents=True, exist_ok=True)
-    with connect() as c:
-        c.executescript('''
+    with db_connection() as c:
+        c.execute('''
         CREATE TABLE IF NOT EXISTS participants (
             id TEXT PRIMARY KEY, participant_code TEXT NOT NULL, condition TEXT NOT NULL,
             started_at TEXT NOT NULL, completed_at TEXT, attention_correct INTEGER,
             workload INTEGER, confidence INTEGER, feedback TEXT);
+        ''')
+        c.execute('''
         CREATE TABLE IF NOT EXISTS responses (
             participant_id TEXT NOT NULL, trial_index INTEGER NOT NULL,
             trial_id TEXT NOT NULL, selected_label TEXT NOT NULL,
@@ -42,8 +65,11 @@ def now(): return datetime.now(timezone.utc).isoformat()
 def current():
     pid = session.get('pid')
     if not pid: return None
-    with connect() as c:
-        return c.execute('SELECT * FROM participants WHERE id=?', (pid,)).fetchone()
+    with db_connection() as c:
+        result = c.execute('SELECT * FROM participants WHERE id=?', (pid,))
+        row = result.fetchone()
+        if row is None: return None
+        return dict(zip((column[0] for column in result.description), row))
 
 @app.route('/')
 def home():
@@ -64,7 +90,7 @@ def start(condition):
     random.shuffle(ids)
     session.clear()
     session.update(pid=pid, ids=ids, index=0, shown_at=time.time())
-    with connect() as c:
+    with db_connection() as c:
         c.execute('INSERT INTO participants (id, participant_code, condition, started_at, attention_correct) VALUES (?,?,?,?,?)', (pid, code, condition, now(), 1))
     return redirect(url_for('trial'))
 
@@ -81,7 +107,7 @@ def trial():
         choice = request.form.get('choice', '')
         if choice not in LABELS: return redirect(url_for('trial'))
         elapsed = min(600000, max(0, int((time.time() - session.get('shown_at', time.time())) * 1000)))
-        with connect() as c:
+        with db_connection() as c:
             c.execute('INSERT OR IGNORE INTO responses VALUES (?,?,?,?,?,?,?,?,?,?)',
                       (p['id'], idx + 1, t['trial_id'], choice, t['ground_truth'], int(choice == t['ground_truth']), elapsed,
                        t['ai_prediction'] if p['condition'] == 'ai' else None,
@@ -102,7 +128,7 @@ def survey():
             workload = int(request.form['workload']); confidence = int(request.form['confidence'])
             if not (1 <= workload <= 5 and 1 <= confidence <= 5): raise ValueError()
         except (KeyError, ValueError): return render_template('survey.html', error='Please answer both ratings.'), 400
-        with connect() as c:
+        with db_connection() as c:
             c.execute('UPDATE participants SET workload=?, confidence=?, feedback=?, completed_at=? WHERE id=?',
                       (workload, confidence, request.form.get('feedback', '')[:1000], now(), p['id']))
         return redirect(url_for('done'))
@@ -118,9 +144,9 @@ def done():
 def export(table):
     if not (os.environ.get('ADMIN_TOKEN') or os.environ.get('EXPORT_TOKEN')) or request.args.get('token') != (os.environ.get('ADMIN_TOKEN') or os.environ.get('EXPORT_TOKEN')): abort(403)
     if table not in ('participants', 'responses'): abort(404)
-    with connect() as c:
+    with db_connection() as c:
         rows = c.execute('SELECT * FROM ' + table).fetchall()
-        cols = [r[1] for r in c.execute('PRAGMA table_info(' + table + ')').fetchall()]
+        cols = [column[0] for column in c.execute('SELECT * FROM ' + table + ' LIMIT 0').description]
     out = io.StringIO(); writer = csv.writer(out); writer.writerow(cols)
     writer.writerows([list(r) for r in rows])
     return Response(out.getvalue(), mimetype='text/csv', headers={'Content-Disposition': f'attachment; filename={table}.csv'})
