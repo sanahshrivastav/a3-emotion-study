@@ -11,15 +11,17 @@ app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 DB = os.environ.get('DATABASE_PATH', str(BASE / 'study.sqlite3'))
 TURSO_DATABASE_URL = os.environ.get('TURSO_DATABASE_URL')
 TURSO_AUTH_TOKEN = os.environ.get('TURSO_AUTH_TOKEN')
+TURSO_TIMEOUT_SECONDS = float(os.environ.get('TURSO_TIMEOUT_SECONDS', '10'))
 app.logger.info(
     'Startup environment: SECRET_KEY=%s TURSO_DATABASE_URL=%s TURSO_AUTH_TOKEN=%s '
-    'DATABASE_PATH=%s ADMIN_TOKEN=%s EXPORT_TOKEN=%s',
+    'DATABASE_PATH=%s ADMIN_TOKEN=%s EXPORT_TOKEN=%s TURSO_TIMEOUT_SECONDS=%.1f',
     'set' if os.environ.get('SECRET_KEY') else 'missing',
     'set' if TURSO_DATABASE_URL else 'missing',
     'set' if TURSO_AUTH_TOKEN else 'missing',
     'set' if os.environ.get('DATABASE_PATH') else 'missing',
     'set' if os.environ.get('ADMIN_TOKEN') else 'missing',
     'set' if os.environ.get('EXPORT_TOKEN') else 'missing',
+    TURSO_TIMEOUT_SECONDS,
 )
 if bool(TURSO_DATABASE_URL) != bool(TURSO_AUTH_TOKEN):
     app.logger.error('Startup failed: set both TURSO_DATABASE_URL and TURSO_AUTH_TOKEN, or neither')
@@ -38,7 +40,11 @@ app.logger.info('Startup dataset loaded: trials=%d', len(TRIALS))
 def connect():
     if TURSO_DATABASE_URL:
         app.logger.info('Database connect starting: backend=Turso')
-        c = libsql.connect(database=TURSO_DATABASE_URL, auth_token=TURSO_AUTH_TOKEN)
+        c = libsql.connect(
+            database=TURSO_DATABASE_URL,
+            auth_token=TURSO_AUTH_TOKEN,
+            timeout=TURSO_TIMEOUT_SECONDS,
+        )
         app.logger.info('Database connect complete: backend=Turso')
         return c
     app.logger.info('Database connect starting: backend=SQLite')
