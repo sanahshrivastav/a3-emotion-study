@@ -78,6 +78,7 @@ def home():
 @app.route('/start/<condition>', methods=['GET', 'POST'])
 def start(condition):
     if condition not in ('baseline', 'ai'): abort(404)
+    app.logger.info('Start route request: method=%s condition=%s', request.method, condition)
     if request.method == 'GET': return render_template('start.html', condition=condition)
     code = request.form.get('participant_code', '').strip()[:60]
     if not code: return render_template('start.html', condition=condition, error='Please enter a participant code.'), 400
@@ -90,8 +91,12 @@ def start(condition):
     random.shuffle(ids)
     session.clear()
     session.update(pid=pid, ids=ids, index=0, shown_at=time.time())
+    app.logger.info('Participant insert: opening database connection')
     with db_connection() as c:
+        app.logger.info('Participant insert: connection established; executing insert')
         c.execute('INSERT INTO participants (id, participant_code, condition, started_at, attention_correct) VALUES (?,?,?,?,?)', (pid, code, condition, now(), 1))
+        app.logger.info('Participant insert: insert executed')
+    app.logger.info('Participant insert: transaction committed')
     return redirect(url_for('trial'))
 
 @app.route('/trial', methods=['GET', 'POST'])
